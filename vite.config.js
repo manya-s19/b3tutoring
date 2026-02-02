@@ -5,6 +5,8 @@ import inlineEditPlugin from './plugins/visual-editor/vite-plugin-react-inline-e
 import editModeDevPlugin from './plugins/visual-editor/vite-plugin-edit-mode.js';
 import iframeRouteRestorationPlugin from './plugins/vite-plugin-iframe-route-restoration.js';
 import selectionModePlugin from './plugins/selection-mode/vite-plugin-selection-mode.js';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -240,7 +242,7 @@ export default defineConfig({
 		react(),
 		addTransformIndexHtml
 	],
-	base: "/b3tutoring",
+	base: "/b3tutoring/",
 
 	server: {
 		cors: true,
