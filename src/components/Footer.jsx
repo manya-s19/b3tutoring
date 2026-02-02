@@ -30,7 +30,6 @@ const Footer = () => {
           <div>
             <span className="font-bold text-lg mb-4 block">Quick Links</span>
             <div className="flex flex-col space-y-2">
-              <Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
               <button 
                 onClick={() => handleScroll('services')} 
                 className="text-left text-gray-400 hover:text-white transition-colors focus:outline-none"
