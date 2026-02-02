@@ -1,13 +1,30 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 
 const HomePage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state && location.state.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        // Add a small delay to ensure DOM is ready and layout is stable
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+      // Clear state to prevent scrolling on subsequent renders if needed, 
+      // though typically navigation clears it.
+    }
+  }, [location]);
+
   return (
     <>
       <Helmet>
@@ -18,43 +35,16 @@ const HomePage = () => {
       <div className="min-h-screen">
         <Navigation />
         <Hero />
-        <Services />
-        <Testimonials />
-        <ContactForm />
-        
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">Block by Block Tutoring</span>
-                <p className="mt-4 text-gray-400">Helping students build fundamentals and foundations, one block at a time.</p>
-              </div>
-              
-              <div>
-                <span className="font-bold text-lg mb-4 block">Quick Links</span>
-                <div className="space-y-2">
-                  <p className="text-gray-400 hover:text-white transition-colors cursor-pointer">Services</p>
-                  <p className="text-gray-400 hover:text-white transition-colors cursor-pointer">Testimonials</p>
-                  <p className="text-gray-400 hover:text-white transition-colors cursor-pointer">Contact</p>
-                </div>
-              </div>
-              
-              <div>
-                <span className="font-bold text-lg mb-4 block">Contact Info</span>
-                <div className="space-y-2 text-gray-400">
-                  <p>blockbyblock.inquiries@gmail.com</p>
-                  <p>647-510-6249</p>
-                  <p>Mon-Fri: 9AM - 6PM</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-              <p>&copy; {new Date().getFullYear()} BlockByBlock. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+        <div id="services">
+          <Services />
+        </div>
+        <div id="testimonials">
+          <Testimonials />
+        </div>
+        <div id="contact">
+          <ContactForm />
+        </div>
+        <Footer />
       </div>
     </>
   );
