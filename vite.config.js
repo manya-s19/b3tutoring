@@ -240,7 +240,7 @@ export default defineConfig({
 		react(),
 		addTransformIndexHtml
 	],
-	base: "/b3tutoring/",
+	base: "/",
 
 	server: {
 		cors: true,
