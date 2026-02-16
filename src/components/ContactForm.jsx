@@ -167,23 +167,13 @@ const ContactForm = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-orange-500 rounded-lg flex items-center justify-center shrink-0 text-white shadow-lg">
-                  <span className="text-2xl">📞</span>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Call Us</h3>
-                  <p className="text-gray-600">647 510 6249</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center shrink-0 text-white shadow-lg">
                   <span className="text-2xl">⏰</span>
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Office Hours</h3>
-                  <p className="text-gray-600">Mon-Fri: 9AM - 6PM</p>
-                  <p className="text-gray-600">Sat: 10AM - 4PM</p>
+                  <p className="text-gray-600">Mon-Fri: 9AM - 6PM (EST)</p>
+                  <p className="text-gray-600">Sat: 10AM - 4PM (EST)</p>
                 </div>
               </div>
             </div>

@@ -55,8 +55,7 @@ const Footer = () => {
             <span className="font-bold text-lg mb-4 block">Contact Info</span>
             <div className="space-y-2 text-gray-400">
               <p>blockbyblock.inquiries@gmail.com</p>
-              <p>647-510-6249</p>
-              <p>Mon-Fri: 9AM - 6PM</p>
+              <p>Mon-Fri: 9AM - 6PM (EST)</p>
             </div>
           </div>
         </div>
