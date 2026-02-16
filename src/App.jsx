@@ -10,7 +10,7 @@ import SciencePage from './pages/SciencePage';
 
 function App() {
   return (
-    <Router basename="/b3tutoring">
+    <Router basename="/">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
