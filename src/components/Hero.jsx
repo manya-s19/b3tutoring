@@ -72,7 +72,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.8,
           delay: 0.6
-        }} className="text-xl sm:text-2xl md:text-3xl text-white/95 max-w-3xl leading-relaxed font-light">Expert one-on-one tutoring in Math, English, French, and Science. Personalized learning that drives real change.</motion.p>
+        }} className="text-xl sm:text-2xl md:text-3xl text-white/95 max-w-3xl leading-relaxed font-light">Expert one-on-one tutoring in Math, English, French, and Science. Personalized learning that drives real change. <strong>Offered for Grades 4 to 12.</strong></motion.p>
 
           {/* CTA Button */}
           <motion.button initial={{

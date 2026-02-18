@@ -75,7 +75,7 @@ const Services = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Personalized one-on-one sessions designed to match your child's learning style and pace
+            Personalized one-on-one sessions designed to match your child's learning style and pace. <strong>Offered for Grades 4-12! Click on any subject below to learn more!</strong>
           </p>
         </motion.div>
 
