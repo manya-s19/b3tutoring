@@ -40,7 +40,7 @@ const Services = () => {
     {
       icon: <Atom className="w-12 h-12" />,
       title: 'Science',
-      description: 'Explore biology, chemistry, and physics with hands-on learning approaches and real-world applications.',
+      description: 'Explore chemistry and physics with hands-on learning approaches and real-world applications.',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50',
       textColor: 'text-blue-600',

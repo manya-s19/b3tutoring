@@ -30,8 +30,8 @@ const SciencePage = () => {
       topics: ["AP Chem Labs", "Kinematics", "Electrochemistry", "Free Response Questions"]
     },
     {
-      title: "IB Science (SL/HL)",
-      description: "Comprehensive support for IB Biology, Chemistry, and Physics. Guidance for Internal Assessments (IA) and rigorous preparation for external exams.",
+      title: "IB Physics & Chemistry (SL/HL)",
+      description: "Comprehensive support for IB Chemistry and Physics. Guidance for Internal Assessments (IA) and rigorous preparation for external exams.",
       topics: ["Group 4 Project", "Data Analysis", "Option Modules", "Internal Assessment"]
     }
   ];
