@@ -10,7 +10,7 @@ const Services = () => {
     {
       icon: <Calculator className="w-12 h-12" />,
       title: 'Mathematics',
-      description: 'From arithmetic to calculus, our expert tutors make complex concepts simple and engaging.',
+      description: 'Learn everything from arithmetic to calculus, and prep for AP, IB, & SAT/ACT Math examinations.',
       color: 'from-orange-500 to-orange-600',
       bgColor: 'bg-orange-50',
       textColor: 'text-orange-600',
@@ -20,7 +20,7 @@ const Services = () => {
     {
       icon: <BookOpen className="w-12 h-12" />,
       title: 'English',
-      description: 'Enhance reading comprehension, writing skills, and literary analysis with personalized guidance.',
+      description: 'Enhance reading comprehension, writing skills, and prep for IB, AP, and SAT/ACT English tests',
       color: 'from-pink-500 to-pink-600',
       bgColor: 'bg-pink-50',
       textColor: 'text-pink-600',
@@ -30,7 +30,7 @@ const Services = () => {
     {
       icon: <Globe className="w-12 h-12" />,
       title: 'French',
-      description: 'Master the French language through immersive conversation practice and grammar lessons.',
+      description: 'Master the French language through conversation and grammar, and prep for IB and AP exams.',
       color: 'from-green-500 to-emerald-600', // Changed to green gradient
       bgColor: 'bg-green-50', // Changed to green background
       textColor: 'text-green-600', // Changed to green text
@@ -40,7 +40,7 @@ const Services = () => {
     {
       icon: <Atom className="w-12 h-12" />,
       title: 'Science',
-      description: 'Explore chemistry and physics with hands-on learning approaches and real-world applications.',
+      description: 'Explore chemistry and physics with hands-on learning approaches, and prep for IB/AP tests.',
       color: 'from-blue-500 to-blue-600',
       bgColor: 'bg-blue-50',
       textColor: 'text-blue-600',
