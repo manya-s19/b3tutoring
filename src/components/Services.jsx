@@ -65,7 +65,7 @@ const Services = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center gap-3 mb-6 -mt-4"
+            className="flex flex-col items-center gap-5 mb-6 -mt-6"
           >
             <span className="text-black font-bold text-3xl sm:text-4xl md:text-5xl tracking-wide">
               LIMITED TIME{' '}
