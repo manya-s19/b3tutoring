@@ -60,12 +60,12 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-          <motion.div
+          <motion.div /*SAT*/
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center gap-1 mb-6"
+            className="flex flex-col items-center gap-3 mb-6 -mt-4"
           >
             <span className="text-black font-bold text-3xl sm:text-4xl md:text-5xl tracking-wide">
               LIMITED TIME{' '}
