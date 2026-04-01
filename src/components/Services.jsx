@@ -65,9 +65,9 @@ const Services = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center gap-5 mb-12 -mt-6"
+            className="flex flex-col items-center gap-5 mb-17 -mt-6"
           >
-            <span className="text-black font-bold text-3xl sm:text-4xl md:text-5xl tracking-wide">
+            <span className="text-black font-bold text-2xl sm:text-3xl md:text-4xl tracking-wide">
               LIMITED TIME{' '}
               <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
                 DISCOUNT
@@ -78,7 +78,7 @@ const Services = () => {
             <a  href="https://drive.google.com/file/d/1Fj9pqdGaIfi_WaT58z7k0Y46EbEiCDZo/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 underline underline-offset-2 font-bold text-2xl sm:text-3xl md:text-4xl hover:text-blue-400 transition-colors duration-200"            
+              className="text-blue-600 underline underline-offset-2 font-bold text-xl sm:text-2xl md:text-3xl hover:text-blue-400 transition-colors duration-200"            
             >
               VIEW PACKAGE OFFERS HERE →
             </a>
