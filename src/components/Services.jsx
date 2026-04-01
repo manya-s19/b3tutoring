@@ -65,20 +65,21 @@ const Services = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full shadow-md mb-5"
+            className="flex flex-col items-center gap-1 mb-6"
           >
-            <span className="text-white font-bold text-sm tracking-wide">
-              🎉 LIMITED TIME DISCOUNT ON SAT PREP!
+            <span className="text-black font-bold text-xl tracking-wide">
+              LIMITED TIME DISCOUNT ON SAT PREP!
             </span>
             
             <a  href="https://drive.google.com/file/d/1Fj9pqdGaIfi_WaT58z7k0Y46EbEiCDZo/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white underline underline-offset-2 font-bold text-sm hover:text-orange-100 transition-colors duration-200 whitespace-nowrap"
+              className="text-blue-600 underline underline-offset-2 font-bold text-xl hover:text-blue-400 transition-colors duration-200"            
             >
               VIEW PACKAGE OFFERS HERE →
             </a>
           </motion.div>
+          
 
           <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
