@@ -60,7 +60,7 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
-        <div className="w-full bg-gradient-to-r from-amber-50 via-orange-50 to-white py-6 mb-10 -mx-4 px-4">  
+        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gradient-to-r from-amber-50 via-orange-50 to-white py-6 mb-10">  
           <motion.div /*SAT*/
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
