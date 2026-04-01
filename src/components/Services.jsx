@@ -71,7 +71,7 @@ const Services = () => {
               🎉 LIMITED TIME DISCOUNT ON SAT PREP!
             </span>
             
-            <a  href={SAT_PROMO_LINK}
+            <a  href="https://drive.google.com/file/d/1Fj9pqdGaIfi_WaT58z7k0Y46EbEiCDZo/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white underline underline-offset-2 font-bold text-sm hover:text-orange-100 transition-colors duration-200 whitespace-nowrap"
