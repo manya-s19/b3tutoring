@@ -60,6 +60,26 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full shadow-md mb-5"
+          >
+            <span className="text-white font-bold text-sm tracking-wide">
+              🎉 LIMITED TIME DISCOUNT ON SAT PREP!
+            </span>
+            
+            <a  href={SAT_PROMO_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white underline underline-offset-2 font-bold text-sm hover:text-orange-100 transition-colors duration-200 whitespace-nowrap"
+            >
+              VIEW PACKAGE OFFERS HERE →
+            </a>
+          </motion.div>
+
           <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
