@@ -60,12 +60,13 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 md:mb-20"
         >
+        <div className="w-full bg-gradient-to-r from-amber-50 via-orange-50 to-white py-6 mb-10 -mx-4 px-4">  
           <motion.div /*SAT*/
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center gap-5 mb-20 -mt-6"
+            className="flex flex-col items-center gap-5"
           >
             <span className="text-black font-bold text-2xl sm:text-3xl md:text-4xl tracking-wide">
               LIMITED TIME{' '}
@@ -83,6 +84,7 @@ const Services = () => {
               VIEW PACKAGE OFFERS HERE →
             </a>
           </motion.div>
+        </div>
           
 
           <motion.span
