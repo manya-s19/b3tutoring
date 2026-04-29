@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet';
 import SubjectHero from '@/components/SubjectHero';
 import CategoryCard from '@/components/CategoryCard';
 import ContactForm from '@/components/ContactForm';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 
 const EnglishPage = () => {
   const handleContactClick = () => {
