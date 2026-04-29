@@ -118,6 +118,20 @@ const Hero = () => {
               <span className="text-sm">Years Experience</span>
             </div>
           </motion.div>
+
+          {/* Gallery of Words Button */}
+          <motion.a
+            href="/gallery"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            className="mt-12 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full font-semibold text-lg shadow-xl hover:shadow-purple-500/50 transition-all duration-300 inline-flex items-center gap-2 border-2 border-white/20"
+          >
+            <Sparkles className="w-5 h-5" />
+            Student Writing Feature: Gallery of Words
+          </motion.a>
         </motion.div>
       </div>
 

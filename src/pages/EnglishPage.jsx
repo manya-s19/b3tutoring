@@ -74,6 +74,49 @@ const EnglishPage = () => {
                 colorClass="from-pink-500 to-rose-500"
               />
             ))}
+
+            {/* Gallery of Words */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: categories.length * 0.1 }}
+              className="group"
+            >
+              <Link to="/gallery">
+                <div className="h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-white/20 hover:scale-105">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Sparkles className="w-8 h-8 text-yellow-300" />
+                    <h3 className="text-2xl font-bold text-white">Gallery of Words</h3>
+                  </div>
+                  
+                  <p className="text-white/90 mb-6 leading-relaxed">
+                    Explore exceptional student writing from our English program. Read creative pieces, essays, and poetry showcasing the talent of our writers.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm text-white border border-white/30">
+                      Student Work
+                    </span>
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm text-white border border-white/30">
+                      Creative Writing
+                    </span>
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm text-white border border-white/30">
+                      Essays & Poetry
+                    </span>
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-sm text-white border border-white/30">
+                      Recognition
+                    </span>
+                  </div>
+
+                  <div className="inline-flex items-center gap-2 text-white font-semibold group-hover:gap-3 transition-all">
+                    View Gallery
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
           </div>
         </section>
 
