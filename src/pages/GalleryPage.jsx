@@ -157,7 +157,7 @@ function GalleryPage() {
             for the Gallery of Words, ask your tutor about submission guidelines.
           </p>
           <Link 
-            to="/"
+            to="/english"
             className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
           >
             Learn More About Our Program
