@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import MathPage from './pages/MathPage';
 import EnglishPage from './pages/EnglishPage';
 import FrenchPage from './pages/FrenchPage';
+import GalleryPage from './pages/GalleryPage';
 import SciencePage from './pages/SciencePage';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/english" element={<EnglishPage />} />
         <Route path="/french" element={<FrenchPage />} />
         <Route path="/science" element={<SciencePage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
     </Router>
   );

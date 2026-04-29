@@ -1,0 +1,171 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowLeft, Calendar, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+// Sample student entries - you can add/edit these
+const studentEntries = [
+  {
+    id: 1,
+    title: "The Sunset's Embrace",
+    author: "Sarah M.",
+    grade: "Grade 10",
+    date: "January 2025",
+    excerpt: "As the sun dipped below the horizon, painting the sky in hues of amber and rose...",
+    content: `As the sun dipped below the horizon, painting the sky in hues of amber and rose, I found myself wondering about the countless sunsets that had come before this one. Each one unique, each one fleeting, yet all connected by the same celestial dance.
+
+The waves lapped gently at the shore, as if whispering secrets to the sand. In that moment, I understood that beauty doesn't need to last forever to be meaningful. Sometimes, the most precious things are the ones that slip through our fingers like grains of sand, leaving only memories in their wake.`,
+    category: "Poetry & Prose"
+  },
+  {
+    id: 2,
+    title: "A Letter to My Future Self",
+    author: "Michael K.",
+    grade: "Grade 11",
+    date: "December 2024",
+    excerpt: "Dear Future Me, I hope you remember what it felt like to dream without limits...",
+    content: `Dear Future Me,
+
+I hope you remember what it felt like to dream without limits. Right now, at sixteen, the world feels both impossibly large and intimately small. I wonder who you've become, what paths you've chosen, and whether you still remember the boy who stayed up late writing by flashlight.
+
+Don't forget to be kind to yourself. Don't forget that mistakes are just stories waiting to be rewritten. And most importantly, don't forget to keep writing.
+
+With hope,
+Your Past Self`,
+    category: "Personal Essay"
+  },
+  {
+    id: 3,
+    title: "The Last Library",
+    author: "Emma L.",
+    grade: "Grade 9",
+    date: "November 2024",
+    excerpt: "In a world where books were forbidden, one girl discovered a secret worth protecting...",
+    content: `In a world where books were forbidden, one girl discovered a secret worth protecting. The entrance was hidden behind a rusted filing cabinet in the abandoned government building. Maya had stumbled upon it by accident, and what she found inside changed everything.
+
+Thousands of books lined the walls, their spines cracked and weathered but their words still alive. She ran her fingers along them, feeling the weight of forgotten stories. In that moment, she made a choice: she would become the keeper of words, the guardian of stories that the world had tried to erase.`,
+    category: "Creative Fiction"
+  }
+];
+
+function GalleryPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900">
+      {/* Header */}
+      <header className="border-b border-white/10 bg-black/20 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Home</span>
+          </Link>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Gallery of Words
+          </motion.h1>
+          <motion.p 
+            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Celebrating the creativity, voice, and talent of our student writers. 
+            Each piece tells a unique story worth sharing.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Entries Grid */}
+      <section className="pb-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {studentEntries.map((entry, index) => (
+              <motion.article
+                key={entry.id}
+                className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {/* Category Badge */}
+                <div className="px-6 pt-6">
+                  <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-medium rounded-full border border-purple-500/30">
+                    {entry.category}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                    {entry.title}
+                  </h3>
+
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                    <div className="flex items-center gap-1">
+                      <User className="w-4 h-4" />
+                      <span>{entry.author}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>{entry.date}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 mb-4 italic">
+                    "{entry.excerpt}"
+                  </p>
+
+                  <div className="text-gray-400 text-sm space-y-3">
+                    {entry.content.split('\n\n').map((paragraph, i) => (
+                      <p key={i} className="leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* Footer */}
+                  <div className="mt-6 pt-4 border-t border-white/10">
+                    <p className="text-sm text-gray-500">{entry.grade}</p>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="pb-20 px-6">
+        <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-purple-900/30 to-blue-900/30 rounded-3xl p-12 border border-white/10">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Want to See Your Work Featured?
+          </h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Our students produce incredible writing every day. If you'd like your work considered 
+            for the Gallery of Words, ask your tutor about submission guidelines.
+          </p>
+          <Link 
+            to="/"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+          >
+            Learn More About Our Program
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default GalleryPage;
