@@ -56,12 +56,13 @@ function GalleryPage() {
       {/* Header */}
       <header className="border-b border-white/10 bg-black/20 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
+          {/* Back Button */}
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+            className="absolute top-8 left-4 md:left-8 z-20 flex items-center gap-2 text-white/90 hover:text-white transition-colors bg-black/20 hover:bg-black/40 backdrop-blur-md px-4 py-2 rounded-full"
           >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Home</span>
+            <ArrowLeft size={20} />
+            <span className="font-medium">Back to Home</span>
           </Link>
         </div>
       </header>
