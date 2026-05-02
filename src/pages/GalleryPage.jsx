@@ -63,7 +63,7 @@ function GalleryPage() {
           >
             <ArrowLeft size={20} />
             <span className="font-medium">Back to Home</span>
-          </Link> 
+          </Link>
         </div>
       </header>
 
