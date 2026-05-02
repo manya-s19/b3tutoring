@@ -112,11 +112,8 @@ const EnglishPage = () => {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="w-full py-3 bg-gradient-to-r from-white to-purple-50 text-purple-700 rounded-lg font-bold hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2">
+                    <div className="w-full py-3 bg-gradient-to-r from-white to-purple-50 text-purple-700 rounded-lg font-bold hover:bg-purple-100 transition-all duration-300 flex items-center justify-center">
                       View Gallery
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
                     </div>
                   </div>
                 </div>

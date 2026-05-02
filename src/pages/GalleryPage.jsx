@@ -7,15 +7,17 @@ import { Link } from 'react-router-dom';
 const studentEntries = [
   {
     id: 1,
-    title: "The Sunset's Embrace",
-    author: "Sarah M.",
-    grade: "Grade 10",
-    date: "January 2025",
-    excerpt: "As the sun dipped below the horizon, painting the sky in hues of amber and rose...",
-    content: `As the sun dipped below the horizon, painting the sky in hues of amber and rose, I found myself wondering about the countless sunsets that had come before this one. Each one unique, each one fleeting, yet all connected by the same celestial dance.
+    title: "SDG: Reflecting on The Importance of Zero Hunger",
+    author: "Gouri K.",
+    grade: "Grade 8",
+    date: "April 2026",
+    excerpt: "Everyone deserves access to nutritious food and a healthy life...",
+    content: `Learning about Goal #2: Zero Hunger taught me that hunger is a serious global issue and not everyone has access to enough healthy food. I was most surprised to learn how many people around the world are affected, even in developed countries. Hunger impacts people by making it harder to stay healthy, learn in school, and live a good life, and it also affects entire communities by making poverty worse (another one of the SDG goals). It can also lead to long-term health problems and limit opportunities for people to succeed in the future. 
 
-The waves lapped gently at the shore, as if whispering secrets to the sand. In that moment, I understood that beauty doesn't need to last forever to be meaningful. Sometimes, the most precious things are the ones that slip through our fingers like grains of sand, leaving only memories in their wake.`,
-    category: "Poetry & Prose"
+My plan includes investing in sustainable agriculture, reducing food waste, improving nutrition, protecting the environment, strengthening social protection, promoting equity and inclusion, and building partnerships within the community. I could also help by organizing food drives at school or raising awareness about food waste, which can help both locally and globally. One action students can take is to donate unused food or volunteer at a food bank. I could also encourage my friends and family to be more mindful when wasting food and support organizations that help people in need. Even small actions, when done by many people, can make a difference. 
+
+Overall, this goal is important because everyone deserves access to nutritious food and a healthy life. If more people take action, we can move closer to ending hunger and creating a better world for everyone!`,
+    category: "Global Issues"
   },
   {
     id: 2,
@@ -112,7 +114,7 @@ function GalleryPage() {
                     {entry.title}
                   </h3>
 
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-4 text-sm text-white/80-400 mb-4">
                     <div className="flex items-center gap-1">
                       <User className="w-4 h-4" />
                       <span>{entry.author}</span>
@@ -123,11 +125,11 @@ function GalleryPage() {
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mb-4 italic">
+                  <p className="text-white-300/90 mb-4 italic">
                     "{entry.excerpt}"
                   </p>
 
-                  <div className="text-gray-400 text-sm space-y-3">
+                  <div className="text-white/80-400 text-sm space-y-3">
                     {entry.content.split('\n\n').map((paragraph, i) => (
                       <p key={i} className="leading-relaxed">
                         {paragraph}
@@ -137,7 +139,7 @@ function GalleryPage() {
 
                   {/* Footer */}
                   <div className="mt-6 pt-4 border-t border-white/10">
-                    <p className="text-sm text-gray-500">{entry.grade}</p>
+                    <p className="text-sm text-white/70-500">{entry.grade}</p>
                   </div>
                 </div>
               </motion.article>
