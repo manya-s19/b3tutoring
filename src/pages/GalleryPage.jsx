@@ -128,7 +128,7 @@ function GalleryPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 h-full flex flex-col overflow-y-auto">
+                <div className="p-6 h-full flex flex-col relative">
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {entry.title}
                   </h3>
@@ -148,7 +148,15 @@ function GalleryPage() {
                     "{entry.excerpt}"
                   </p>
 
-                  <div className="text-white/80 text-sm space-y-3 flex-1">
+                  {/* Content preview - hidden on hover */}
+                  <div className="text-white/80 text-sm space-y-3 flex-1 overflow-hidden group-hover:hidden">
+                    <p className="leading-relaxed line-clamp-[12]">
+                      {entry.content}
+                    </p>
+                  </div>
+
+                  {/* Full content - shown on hover with scroll */}
+                  <div className="hidden group-hover:flex text-white/80 text-sm space-y-3 flex-1 overflow-y-auto flex-col pr-2">
                     {entry.content.split('\n\n').map((paragraph, i) => (
                       <p key={i} className="leading-relaxed">
                         {paragraph}
@@ -190,5 +198,3 @@ function GalleryPage() {
 }
 
 export default GalleryPage;
-
-
