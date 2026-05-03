@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -51,24 +51,25 @@ Thousands of books lined the walls, their spines cracked and weathered but their
 ];
 
 function GalleryPage() {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Header */}
       <header className="border-b border-white/10 bg-black/20 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
-          {/* Back Button */}
           <Link 
             to="/" 
-            className="absolute top-8 left-4 md:left-8 z-20 flex items-center gap-2 text-white/90 hover:text-white transition-colors bg-black/20 hover:bg-black/40 backdrop-blur-md px-4 py-2 rounded-full"
+            className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
           >
-            <ArrowLeft size={20} />
-            <span className="font-medium">Back to Home</span>
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Home</span>
           </Link>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
@@ -79,7 +80,7 @@ function GalleryPage() {
             Gallery of Words
           </motion.h1>
           <motion.p 
-            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            className="text-xl text-white/90 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -90,17 +91,34 @@ function GalleryPage() {
         </div>
       </section>
 
-      {/* Entries Grid */}
+      {/* Horizontal Scrolling River */}
       <section className="pb-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {studentEntries.map((entry, index) => (
+        <div className="relative">
+          <motion.div 
+            className="flex gap-8 py-8"
+            animate={isPaused ? {} : { x: [0, -2000] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 60,
+                ease: "linear"
+              }
+            }}
+          >
+            {/* Duplicate entries for seamless loop */}
+            {[...studentEntries, ...studentEntries].map((entry, index) => (
               <motion.article
-                key={entry.id}
-                className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300 group"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                key={`${entry.id}-${index}`}
+                className="flex-shrink-0 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden group cursor-pointer"
+                style={{ width: '500px', height: '600px' }}
+                onHoverStart={() => setIsPaused(true)}
+                onHoverEnd={() => setIsPaused(false)}
+                whileHover={{ 
+                  scale: 1.1,
+                  zIndex: 10,
+                  transition: { duration: 0.3 }
+                }}
               >
                 {/* Category Badge */}
                 <div className="px-6 pt-6">
@@ -110,12 +128,12 @@ function GalleryPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 h-full flex flex-col overflow-y-auto">
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                     {entry.title}
                   </h3>
 
-                  <div className="flex items-center gap-4 text-sm text-white/80-400 mb-4">
+                  <div className="flex items-center gap-4 text-sm text-white/80 mb-4">
                     <div className="flex items-center gap-1">
                       <User className="w-4 h-4" />
                       <span>{entry.author}</span>
@@ -126,11 +144,11 @@ function GalleryPage() {
                     </div>
                   </div>
 
-                  <p className="text-white-300/90 mb-4 italic">
+                  <p className="text-white/90 mb-4 italic">
                     "{entry.excerpt}"
                   </p>
 
-                  <div className="text-white/80-400 text-sm space-y-3">
+                  <div className="text-white/80 text-sm space-y-3 flex-1">
                     {entry.content.split('\n\n').map((paragraph, i) => (
                       <p key={i} className="leading-relaxed">
                         {paragraph}
@@ -139,13 +157,13 @@ function GalleryPage() {
                   </div>
 
                   {/* Footer */}
-                  <div className="mt-6 pt-4 border-t border-white/10">
-                    <p className="text-sm text-white/70-500">{entry.grade}</p>
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <p className="text-sm text-white/60">{entry.grade}</p>
                   </div>
                 </div>
               </motion.article>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -155,7 +173,7 @@ function GalleryPage() {
           <h2 className="text-3xl font-bold text-white mb-4">
             Want to See Your Work Featured?
           </h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
             Our students produce incredible writing every day. If you'd like your work considered 
             for the Gallery of Words, ask your tutor about submission guidelines.
           </p>
@@ -172,3 +190,5 @@ function GalleryPage() {
 }
 
 export default GalleryPage;
+
+
