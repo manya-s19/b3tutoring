@@ -24,7 +24,7 @@ Overall, this goal is important because everyone deserves access to nutritious f
     title: "A Letter to My Future Self",
     author: "Michael K.",
     grade: "Grade 11",
-    date: "December 2024",
+    date: "December 2025",
     excerpt: "Dear Future Me, I hope you remember what it felt like to dream without limits...",
     content: `Dear Future Me,
 
@@ -41,7 +41,7 @@ Your Past Self`,
     title: "The Last Library",
     author: "Emma L.",
     grade: "Grade 9",
-    date: "November 2024",
+    date: "February 2026",
     excerpt: "In a world where books were forbidden, one girl discovered a secret worth protecting...",
     content: `In a world where books were forbidden, one girl discovered a secret worth protecting. The entrance was hidden behind a rusted filing cabinet in the abandoned government building. Maya had stumbled upon it by accident, and what she found inside changed everything.
 
