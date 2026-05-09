@@ -21,20 +21,25 @@ Overall, this goal is important because everyone deserves access to nutritious f
   },
   {
     id: 2,
-    title: "A Letter to My Future Self",
-    author: "Michael K.",
-    grade: "Grade 11",
-    date: "December 2025",
-    excerpt: "Dear Future Me, I hope you remember what it felt like to dream without limits...",
-    content: `Dear Future Me,
+    title: "Project Reverse Invasion",
+    author: "Ruth B.",
+    grade: "Grade 5",
+    date: "May 2026",
+    excerpt: "The fate of the whole world was in their hands…...",
+    content: `"It’s over" William said as the aliens took over. This was it they had been caught. Project Reverse Invasion was over, Earth was doomed and it was all their fault. March 3rd. Harper had recently joined a science club and tomorrow they were going to see Dr. Alexander’s new invention. Harper was very excited! She couldn’t wait to see what kind of invention Dr.Alexander had made. That night she couldn't sleep, her mind was filled with many questions. What was the invention? What was its purpose? She wouldn’t know until tomorrow. 
 
-I hope you remember what it felt like to dream without limits. Right now, at sixteen, the world feels both impossibly large and intimately small. I wonder who you've become, what paths you've chosen, and whether you still remember the boy who stayed up late writing by flashlight.
+March 4, It was the next day Harper woke up so fast she practically jumped out of her bed. She got ready really quickly and hopped on the bus. On the bus she made a new friend whose name was William. William was just like Harper, he was very excited to see what invention Dr. Alexander had made. When they got there they were greeted by Dr.Alexander himself. After his long speech it was the time they both had been waiting for Dr.Alexander’s invention. Dr. Alexander had made a machine that could take them to any universe they wanted. "This is for a very important mission," Dr.Alexander said. Harper and William pleaded with Dr.Alexander to let them go on the mission too. "We’ll be very responsible," William said.  "We won’t get lost, " Harper added. Dr. Alexander said that he wouldn’t let them because it was a very important mission that only he could do. A week later Harper and William got an email from  Dr. Alexander. It said that he had thought about it and that he might need some extra help and assistance with the mission.
 
-Don't forget to be kind to yourself. Don't forget that mistakes are just stories waiting to be rewritten. And most importantly, don't forget to keep writing.
+April 4, It had been a month since Harper and William had talked to Dr.Alexander,today they would go to Nyxara to reconcile with the people there. When they arrived, Dr.Alexander told them that they had to be hidden or the Nyxarians would be very angry by their presence. He explained that both universes had a terrible past. Harper and William believed him.  April 11, It had been a week since the arrival at  Nyxara. The three mostly survived on berries and the river beside a cave. None of the Nyxarians went near the cave so they decided to set camp there. April 15, Harper and William wondered " are we ever going to actually go to the Nyxarians and reconcile with them. If so, when?" They both went to ask Dr.Alexander the only thing that was inside the cave was some metal. "That’s weird,We didn’t bring any metal with us," William said. " William, look there is some kind of blueprint here" Harper mentioned.
+"The blueprint is for an invention to… destroy and take over the universe Nyxara!!!!" Harper said in disbelief."So that was his real plan" William responded. "There’s no way we believed him," William added.
 
-With hope,
-Your Past Self`,
-    category: "Personal Essay"
+	That same day, Both Harper and William went to find Dr.Alexander to confront him. But when they found him, he was destroying the universe. He was Nyxarians life and home for no reason. The two got extremely  mad. They went to try and stop Dr.Alexander from destroying the universe even further. They told him what he was doing was very wrong and how he was being super cruel. After hours of talking and pleading with Dr.Alexander not to hurt them he finally said that he would never harm the Nyxarians again. Harper and William trusted him again and went to bed. Little did they know that would be a grave mistake. The next morning the two woke up to complete silence. They looked outside and all of the Nyxarians were gone. When they asked Dr. Alexander, he had no words. Later he said they had left, with no explanation. He mentioned that they broke the machine trying to escape. In her gut, Harper felt something was off. How had they broken the machine in the first place? 
+
+
+	April 21, After a few days Dr.Alexander’s invention was working again. When they went back to Earth it was a complete disaster. Their home was taken over by the Nyxarians and project reverse invasion was over. Harper and William both looked at each other wondering what they would do next. The two were shocked and confused.
+They questioned how they let the Nyxarians invade the Earth and take over. 
+They both only knew that the fate of the whole world was in their hands…`,
+    category: "Short Story"
   },
   {
     id: 3,
